@@ -1,4 +1,18 @@
-import { createApp } from 'vue'
+import {createApp} from 'vue'
 import App from './App.vue'
 
-createApp(App).mount('#app')
+// router
+import router from './router'
+
+// layout
+import AppLayout from "@/layouts/AppLayout";
+
+// initialize vue instance
+const vueApp = createApp(App)
+
+// initialize components and plugins
+vueApp.use(router)
+
+// mount app
+vueApp.component('AppLayout', AppLayout)
+vueApp.mount('#app')

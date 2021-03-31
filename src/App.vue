@@ -1,26 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <AppLayout>
+<!--    <router-view name="default" v-slot="{ Component, route }">-->
+<!--      <transition :name="route.meta.transition" mode="out-in" :duration="300" :key="route.path">-->
+<!--        <Suspense>-->
+<!--          <template #default>-->
+<!--            <component :is="Component" :key="route.path"/>-->
+<!--          </template>-->
+<!--          <template #fallback>-->
+<!--            <div>-->
+<!--              Loading...-->
+<!--            </div>-->
+<!--          </template>-->
+<!--        </Suspense>-->
+<!--      </transition>-->
+<!--    </router-view>-->
+  </AppLayout>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import {onMounted} from "@vue/runtime-core";
 
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  components: {},
+  setup() {
+    onMounted(async () => {
+    })
+
+    return {}
   }
+
 }
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+<style lang="scss">
+@import "assets/styles/main.scss";
 </style>

@@ -1,0 +1,14 @@
+/******* MEDIA QUERIES *********/
+$breakpoints: (
+        'phoneS': 320px,
+        'phoneM': 375px,
+        'phoneL': 414px,
+        'tablet': 768px,
+        'desktop': 1024px
+) !default;
+
+/******* COLORS *******/
+$dark-blue: #001927;
+
+// FOOTER
+$footer-background: $dark-blue;
