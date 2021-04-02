@@ -13,12 +13,8 @@
       </div>
 
       <div class="section sitemap">
-        <div class="section-col">
-          <list-loader/>
-        </div>
-
-        <div class="section-col">
-          <list-loader/>
+        <div class="section-col" v-for="n in 5" :key="n">
+          <list-loader />
         </div>
       </div>
     </div>

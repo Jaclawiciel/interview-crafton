@@ -4,6 +4,9 @@
   .content {
     display: flex;
     flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    max-width: 1160px;
 
     .section {
       display: flex;
@@ -13,7 +16,6 @@
         align-items: center;
 
         .address {
-          //margin-right: 20px;
           min-width: 50%;
         }
 
@@ -36,10 +38,12 @@
 
       &.sitemap {
         margin-top: 20px;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
 
         .section-col {
-          margin-bottom: 30px;
+          margin: 0 12px 30px 0;
+          min-width: calc(50% - 12px);
 
           li {
             margin-bottom: 6px;
@@ -53,11 +57,57 @@
             }
           }
         }
+
+        .copyright {
+          text-align: right;
+          width: 100%;
+        }
       }
     }
   }
 
   .copyright {
     text-align: right;
+  }
+}
+
+@include media(">phoneL") {
+  .main-footer {
+    padding: 50px;
+    .content {
+      flex-direction: row;
+      justify-content: center;
+      margin: 0 auto;
+
+      .section {
+        &.company-details {
+          flex-direction: column;
+          align-items: flex-start;
+          margin-right: 30px;
+          min-width: 200px;
+
+          .map {
+            &:not(.loader) {
+              width: 180px;
+              height: 180px;
+              padding-top: 0;
+            }
+
+            &.loader {
+              width: 180px;
+              height: 180px;
+            }
+          }
+        }
+
+        &.sitemap {
+          justify-content: flex-end;
+
+          .section-col {
+            min-width: 160px;
+          }
+        }
+      }
+    }
   }
 }

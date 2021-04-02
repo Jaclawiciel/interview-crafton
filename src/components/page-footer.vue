@@ -16,13 +16,14 @@
             <li class="title">{{ column.title }}</li>
             <li v-for="link in column.links" :key="link.label">
               <router-link :to="link.url">{{link.label}}</router-link>
-<!--              <a :href="link.url">{{ link.label }}</a>-->
             </li>
           </ul>
         </div>
+        <div class="copyright">{{ copyright }}</div>
       </div>
+
     </div>
-    <div class="copyright">{{ copyright }}</div>
+
   </footer>
 </template>
 
