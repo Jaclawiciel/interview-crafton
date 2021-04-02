@@ -17,7 +17,8 @@
 // Layout related stylesheets
 @import "layout/default";
 
-// Components and modules
+// Common components stylesheets
+@import "components/loaders";
 
 // Page-specific stylesheets
 // Import pages stylesheets in the Vue page component

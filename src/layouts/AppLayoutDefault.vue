@@ -2,17 +2,39 @@
   <div class="default-layout">
     <div class="top-layout-container">
       <nav class="menu">Menu</nav>
-      <main class="content">CONTENT</main>
+      <main class="content">
+        <slot/>
+      </main>
     </div>
-    <c-footer/>
+    <transition name="fade" mode="out-in" :duration="300">
+    <Suspense>
+        <template #default>
+          <page-footer/>
+<!--                  <Loader name="FooterLoader"/>-->
+        </template>
+        <template #fallback>
+          <Loader name="FooterLoader"/>
+        </template>
+    </Suspense>
+    </transition>
   </div>
 </template>
 
 <script>
-import CFooter from "@/components/c-footer";
+import PageFooter from "@/components/page-footer";
+import Loader from "@/components/loaders/Loader";
+import {useStore} from "vuex";
+import {computed} from "@vue/reactivity";
+
 export default {
   name: 'AppLayoutDefault',
-  components: {CFooter},
+  components: {Loader, PageFooter},
+  // components: {Loader},
+  setup () {
+    const store = useStore()
+    const loading = computed(() => store.state['loaders']['footer'].isLoading)
+    return {loading}
+  }
 }
 </script>
 

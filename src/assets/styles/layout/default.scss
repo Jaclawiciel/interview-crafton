@@ -16,3 +16,18 @@ footer {
   background: $footer-background;
   color: white;
 }
+
+.fade-enter-active,
+.fade-leave-active {
+  .content, .copyright {
+    transition: opacity 0.5s ease;
+  }
+
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  .content, .copyright {
+    opacity: 0;
+  }
+}

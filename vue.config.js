@@ -13,13 +13,14 @@ module.exports = {
         }
     },
     devServer: {
+        headers: { "Access-Control-Allow-Origin": "*" },
         clientLogLevel: 'info',
         contentBase: ['./public'],
         hot: true,
         https: false,
         proxy: {
             '^/api': {
-                target: 'http://localhost:8000/',
+                target: 'https://336cf581-3944-4a73-8ade-f156549a163e.mock.pstmn.io',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {

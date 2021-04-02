@@ -1,0 +1,38 @@
+.loader-element {
+  opacity: .8;
+
+  &.animate {
+    background-size: 100%;
+    background-image: linear-gradient(to right, $loader-light, $loader-dark);
+    position: relative;
+    z-index: 1;
+
+    &:before {
+      border-radius: inherit;
+      background-image: linear-gradient(to right, $loader-dark, $loader-light);
+      content: '';
+      display: block;
+      height: 100%;
+      position: absolute;
+      opacity: 0;
+      width: 100%;
+      z-index: 0;
+      animation: boilerplate-gradient-animation 3s infinite ease-in-out;
+    }
+  }
+}
+
+@keyframes boilerplate-gradient-animation {
+  0% {
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  40% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

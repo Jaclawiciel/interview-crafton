@@ -1,10 +1,10 @@
 <template>
   <AppLayout>
-<!--    <router-view name="default" v-slot="{ Component, route }">-->
-<!--      <transition :name="route.meta.transition" mode="out-in" :duration="300" :key="route.path">-->
+    <router-view name="default" v-slot="{ Component, route }">
+      <transition :name="route.meta.transition" mode="out-in" :duration="300" :key="route.path">
 <!--        <Suspense>-->
 <!--          <template #default>-->
-<!--            <component :is="Component" :key="route.path"/>-->
+            <component :is="Component" :key="route.path"/>
 <!--          </template>-->
 <!--          <template #fallback>-->
 <!--            <div>-->
@@ -12,8 +12,8 @@
 <!--            </div>-->
 <!--          </template>-->
 <!--        </Suspense>-->
-<!--      </transition>-->
-<!--    </router-view>-->
+      </transition>
+    </router-view>
   </AppLayout>
 </template>
 
