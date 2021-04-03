@@ -1,5 +1,7 @@
 <template>
-<h1>MAIN LOADER</h1>
+<div class="main-loader">
+  <img src="../../assets/img/logo-black.png" alt="Logo">
+</div>
 </template>
 
 <script>
@@ -9,5 +11,10 @@ export default {
 </script>
 
 <style scoped>
-
+.main-loader {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 </style>

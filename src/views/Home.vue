@@ -1,5 +1,5 @@
 <template>
-  <h1>HOME</h1>
+  <div class="home">HOME</div>
 </template>
 
 <script>
@@ -28,12 +28,12 @@ export default {
 </script>
 
 <style scoped lang="scss">
-//.header-image {
-//  height: 100vh;
-//  width: 100%;
-//  background-image: url("../assets/img/header-image.jpg");
-//  background-position: center;
-//  background-repeat: no-repeat;
-//  background-size: cover;
-//}
+.home {
+  height: 100vh;
+  width: 100%;
+  //background-image: url("../assets/img/header-image.jpg");
+  //background-position: center;
+  //background-repeat: no-repeat;
+  //background-size: cover;
+}
 </style>

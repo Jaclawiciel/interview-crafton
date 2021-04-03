@@ -1,7 +1,7 @@
 <template>
   <div class="default-layout">
     <div class="top-layout-container">
-      <transition name="custom-fade" mode="out-in" :duration="300">
+      <transition name="custom-fade" mode="out-in" :duration="500">
         <Suspense>
           <template #default>
             <page-header/>
@@ -17,7 +17,7 @@
       </main>
 
     </div>
-    <transition name="custom-fade" mode="out-in" :duration="300">
+    <transition name="custom-fade" mode="out-in" :duration="500">
       <Suspense>
         <template #default>
           <page-footer/>
