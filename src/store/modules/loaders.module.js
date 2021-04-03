@@ -1,5 +1,6 @@
 const state = () => ({
-    footer: {isLoading: false}
+    footer: {isLoading: false},
+    header: {isLoading: false}
 })
 const getters = {
     loading: state => serviceName => {

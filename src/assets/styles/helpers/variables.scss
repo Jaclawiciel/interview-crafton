@@ -16,8 +16,11 @@ $loader-background: #CCC;
 $loader-light: #EEE;
 $loader-dark: #AAA;
 
-/******* COLORS *******/
+/******* COLORS DEFINITION *******/
 $link: $light-blue;
+$mobile-menu-items: $font-dark;
+$menu-items: $font-light;
+$header-overlap: rgba(0, 0, 0, .5);
 
 // FOOTER
 $footer-background: $dark-blue;

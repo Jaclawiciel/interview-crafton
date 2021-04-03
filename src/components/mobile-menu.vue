@@ -1,11 +1,8 @@
 <template>
   <nav class="mobile-menu" :class="{'open': isOpen}">
-    <ul>
-      <li>Strona 1</li>
-      <li>Strona 1</li>
-      <li>Strona 1</li>
-      <li>Strona 1</li>
-    </ul>
+    <nav>
+      <router-link class="menu-item" v-for="(menuItem, index) in menuItems" :key="index" :to="menuItem.url">{{menuItem.label}}</router-link>
+    </nav>
   </nav>
 </template>
 
@@ -17,6 +14,10 @@ export default {
       type: Boolean,
       required: true,
       default: false
+    },
+    menuItems: {
+      type: Array,
+      required: true
     }
   }
 }
@@ -34,10 +35,25 @@ export default {
     transform: translateX(0);
   }
 
-  ul {
+  nav {
     width: 90%;
     background: white;
     padding: 20px;
+
+    .menu-item {
+      display: block;
+      color: $font-dark;
+
+      &:not(:last-child) {
+        margin-bottom: 12px;
+      }
+    }
+  }
+}
+
+@include media('>phoneL') {
+  .mobile-menu {
+    display: none;
   }
 }
 </style>

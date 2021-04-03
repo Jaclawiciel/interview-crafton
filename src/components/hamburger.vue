@@ -59,4 +59,10 @@ export default {
     }
   }
 }
+
+@include media('>phoneL') {
+  .hamburger {
+    display: none;
+  }
+}
 </style>
