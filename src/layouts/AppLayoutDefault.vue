@@ -1,14 +1,16 @@
 <template>
   <div class="default-layout">
     <div class="top-layout-container">
-      <Suspense>
-        <template #default>
-          <page-header/>
-        </template>
-        <template #fallback>
-          <Loader name="HeaderLoader"/>
-        </template>
-      </Suspense>
+      <transition name="fade" mode="out-in" :duration="300">
+        <Suspense>
+          <template #default>
+            <page-header/>
+          </template>
+          <template #fallback>
+            <header-loader/>
+          </template>
+        </Suspense>
+      </transition>
 
       <main class="content">
         <slot/>
@@ -20,7 +22,7 @@
           <page-footer/>
         </template>
         <template #fallback>
-          <Loader name="FooterLoader"/>
+          <footer-loader/>
         </template>
       </Suspense>
     </transition>
@@ -31,11 +33,13 @@
 import {useStore} from "vuex";
 import {computed} from "@vue/reactivity";
 import PageFooter from "@/components/page-footer";
+import FooterLoader from "@/components/loaders/FooterLoader";
+import HeaderLoader from "@/components/loaders/HeaderLoader";
 import PageHeader from "@/components/page-header";
 
 export default {
   name: 'AppLayoutDefault',
-  components: {PageHeader, PageFooter},
+  components: {PageHeader, HeaderLoader, FooterLoader, PageFooter},
   setup() {
     const store = useStore()
     const loading = computed(() => store.state['loaders']['footer'].isLoading)

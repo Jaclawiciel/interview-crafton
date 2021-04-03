@@ -1,5 +1,9 @@
 <template>
-  <header>LOADING...</header>
+  <header class="header">
+    <div class="main-content">
+      <img class="logo" src="../../assets/img/logo.png" alt="Logo">
+    </div>
+  </header>
 </template>
 
 <script>
@@ -9,5 +13,5 @@ export default {
 </script>
 
 <style scoped lang="scss">
-
+@import "./src/assets/styles/components/header";
 </style>
