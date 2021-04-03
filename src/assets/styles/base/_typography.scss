@@ -55,3 +55,21 @@ ul {
 .strong {
   font-weight: bold;
 }
+
+.carousel-item {
+  .title {
+
+    h1 {
+      font-size: 2rem;
+      font-weight: 100;
+      color: white;
+      line-height: 1.4;
+    }
+
+    em {
+      display: inline-block;
+      color: $carousel-title-em;
+      font-style: normal;
+    }
+  }
+}

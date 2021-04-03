@@ -10,17 +10,26 @@ $breakpoints: (
 /******* COLORS *******/
 $dark-blue: #001927;
 $light-blue: #00B6DC;
+$yellow: #FFCD19;
 $font-dark: #000;
 $font-light: #FFF;
 $loader-background: #CCC;
 $loader-light: #EEE;
 $loader-dark: #AAA;
+$button-fill: #FFF;
+$button-fill-text: #000;
+$button-outline: #FFF;
+$button-outline-text: #FFF;
+$black-overlay: rgba(0, 0, 0, .5);
 
 /******* COLORS DEFINITION *******/
 $link: $light-blue;
 $mobile-menu-items: $font-dark;
 $menu-items: $font-light;
-$header-overlap: rgba(0, 0, 0, .5);
+$header-overlap: $black-overlay;
+$carousel-title-em: $light-blue;
+$carousel-active-nav: $yellow;
+$carousel-overlay: $black-overlay;
 
 // FOOTER
 $footer-background: $dark-blue;

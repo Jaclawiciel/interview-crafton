@@ -1,7 +1,7 @@
 <template>
   <AppLayout>
     <router-view name="default" v-slot="{ Component, route }">
-      <transition :name="route.meta.transition" mode="out-in" :duration="1500" :key="route.path">
+      <transition :name="route.meta.transition" mode="out-in" :key="route.path">
         <Suspense>
           <template #default>
             <component :is="Component" :key="route.path"/>

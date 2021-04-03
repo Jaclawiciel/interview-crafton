@@ -8,14 +8,14 @@ const routes = [
         path: "/",
         component: Home,
         meta: {
-            transition: "fade"
+            transition: "slow-fade"
         }
     },
     {
         path: "/home",
         component: Home,
         meta: {
-            transition: "fade"
+            transition: "slow-fade"
         }
     },
     {

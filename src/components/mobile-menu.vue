@@ -25,12 +25,14 @@ export default {
 
 <style scoped lang="scss">
 .mobile-menu {
+  position: fixed;
+  top: 85px;
   color: $font-dark;
   width: 100%;
   display: flex;
   justify-content: flex-end;
   transform: translateX(100%);
-  transition: transform .25s .25s;
+  transition: transform .25s .10s;
   &.open {
     transform: translateX(0);
   }
