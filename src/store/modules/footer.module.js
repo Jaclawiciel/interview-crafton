@@ -13,13 +13,14 @@ const actions = {
         commit('loaders/loadingStart', "footer", {root: true});
         try {
             const footerContent = await footerService.getContent();
+            console.log(footerContent)
             commit('setContent', {footerContent: footerContent.data})
             commit('loaders/loadingStop', "footer", {root: true});
             return footerContent.data
         } catch (error) {
-            console.error("[footer.module] error!")
+            console.error("[footer.module] error! " + error.message)
             commit('loaders/loadingStop', "footer", {root: true});
-            return null
+            throw error.message
         }
     }
 }

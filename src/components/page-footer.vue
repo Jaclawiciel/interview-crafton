@@ -1,6 +1,7 @@
 <template>
   <footer class="main-footer">
-    <div class="content">
+    <p class="error" v-if="error">{{error}}</p>
+    <div v-else class="content">
       <div class="section company-details">
         <p class="address" v-html="address"/>
         <google-map
@@ -29,23 +30,33 @@
 
 <script>
 import {useStore} from "vuex";
-import {computed} from "@vue/reactivity";
+import {computed, ref} from "@vue/reactivity";
 import GoogleMap from "@/components/google-map";
 
 export default {
   name: "page-footer",
   components: {GoogleMap},
   async setup() {
+    const error = ref(null)
+    const address = ref(null)
+    const copyright = ref(null)
+    const columns = ref(null)
+    const mapDetails = ref(null)
     const store = useStore()
-    await store.dispatch("footer/getContent")
-    const content = computed(() => store.state['footer'].content)
-    console.log(content)
-    const address = content.value.address;
-    const copyright = content.value.copyright;
-    const columns = content.value.columns;
-    const mapDetails = content.value.map;
 
-    return {address, copyright, columns, mapDetails}
+    try {
+      await store.dispatch("footer/getContent")
+      const content = computed(() => store.state['footer'].content)
+      address.value = content.value.address;
+      copyright.value = content.value.copyright;
+      columns.value = content.value.columns;
+      mapDetails.value = content.value.map;
+    } catch (e) {
+      error.value = e;
+    }
+
+
+    return {address, copyright, columns, mapDetails, error}
   }
 }
 </script>

@@ -5,6 +5,6 @@ export const footerService = {
 };
 
 async function getContent() {
-    return await axios.get(`footer/getContent`);
+    return await axios.get(`getFooterContent`);
 }
 

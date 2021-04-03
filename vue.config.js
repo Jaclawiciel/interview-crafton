@@ -20,7 +20,7 @@ module.exports = {
         https: false,
         proxy: {
             '^/api': {
-                target: 'https://336cf581-3944-4a73-8ade-f156549a163e.mock.pstmn.io',
+                target: 'https://6068426f0add49001733fe2f.mockapi.io',
                 ws: true,
                 changeOrigin: true,
                 pathRewrite: {

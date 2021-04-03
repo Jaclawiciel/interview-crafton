@@ -2,7 +2,7 @@ import axiosInstance from "axios";
 
 let config = {
     // baseURL: "http://localhost:8080/api",
-    baseURL: "https://336cf581-3944-4a73-8ade-f156549a163e.mock.pstmn.io",
+    baseURL: "https://6068426f0add49001733fe2f.mockapi.io",
     withCredentials: false, // Check cross-site Access-Control
     headers: {
         common: {}
