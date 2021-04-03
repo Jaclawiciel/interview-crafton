@@ -51,7 +51,7 @@ export default {
   }
 }
 
-@include media('>phoneL') {
+@include media('>=tablet') {
   .mobile-menu {
     display: none;
   }

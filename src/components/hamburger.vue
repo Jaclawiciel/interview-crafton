@@ -60,7 +60,7 @@ export default {
   }
 }
 
-@include media('>phoneL') {
+@include media('>=tablet') {
   .hamburger {
     display: none;
   }

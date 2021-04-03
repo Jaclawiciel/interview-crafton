@@ -92,6 +92,14 @@ export default {
   }
 }
 
+@include media("<=tablet") {
+  .main-content {
+    .menu-items {
+      display: none;
+    }
+  }
+}
+
 @include media(">=tablet") {
   .header {
     .main-content {
