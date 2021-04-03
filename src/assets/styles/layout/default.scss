@@ -17,8 +17,8 @@ footer {
   color: white;
 }
 
-.fade-enter-active,
-.fade-leave-active {
+.custom-fade-enter-active,
+.custom-fade-leave-active {
   .content,
   .copyright,
   .menu-items,
@@ -27,8 +27,8 @@ footer {
   }
 }
 
-.fade-enter-from,
-.fade-leave-to {
+.custom-fade-enter-from,
+.custom-fade-leave-to {
   .content,
   .copyright,
   .menu-items,

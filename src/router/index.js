@@ -6,11 +6,17 @@ import Dlaczego from "@/views/Dlaczego";
 const routes = [
     {
         path: "/",
-        component: Home
+        component: Home,
+        meta: {
+            transition: "fade"
+        }
     },
     {
         path: "/home",
-        component: Home
+        component: Home,
+        meta: {
+            transition: "fade"
+        }
     },
     {
         path: "/dlaczego",
