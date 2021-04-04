@@ -78,6 +78,10 @@ ul {
   .blocks {
     .block {
       .text-col {
+        .title {
+          margin: 0;
+        }
+
         p {
           margin: 25px 0;
         }

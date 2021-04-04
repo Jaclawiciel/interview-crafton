@@ -2,11 +2,11 @@
   <div class="blocks">
     <template v-for="(block, index) in blocks" :key="index">
       <div class="block">
-        <div class="text-col">
-          <h2 class="Title">{{ block.text.title }}</h2>
+        <div class="text-col col">
+          <h2 class="title">{{ block.text.title }}</h2>
           <div class="paragraphs" v-html="block.text.paragraph"></div>
         </div>
-        <div class="media-col">
+        <div class="media-col col">
           <img v-if="block.media.type === 'image'" class="image" :src="block.media.url" alt="Promotional graphics">
           <template v-else-if="block.media.type === 'video'">
             <img @click="showVideos[index] = true"
@@ -61,11 +61,11 @@ export default {
 .blocks {
   display: flex;
   flex-direction: column;
+  margin: 15px 5%;
 
   .block {
     display: flex;
     flex-direction: column;
-    width: 90%;
     margin: 30px auto;
 
     .text-col {
@@ -74,8 +74,41 @@ export default {
 
     .media-col {
       .image {
-        max-width: 100%;
+        width: 100%;
         box-shadow: 0 12px 15px -5px rgba(0, 0, 0, .35);
+      }
+    }
+  }
+}
+
+@include media(">=tablet") {
+  .blocks {
+    margin: 25px 5%;
+    .block {
+      flex-direction: row;
+      justify-content: center;
+      margin: 50px auto;
+
+      .col {
+        max-width: 50%;
+        margin: 0 30px;
+      }
+
+      &:nth-child(2n) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+
+@include media(">=desktop") {
+  .blocks {
+    margin: 25px 10%;
+    .block {
+      margin: 50px auto;
+
+      .col {
+        margin: 0 30px;
       }
     }
   }
