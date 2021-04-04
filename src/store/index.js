@@ -5,6 +5,7 @@ import {loaders} from './modules/loaders.module'
 import {footer} from './modules/footer.module'
 import {header} from "@/store/modules/header.module";
 import {carousel} from "@/store/modules/carousel.module";
+import {main} from "@/store/modules/main.module";
 
 // Vue.use(Vuex)
 
@@ -13,7 +14,8 @@ const store = createStore({
         loaders,
         footer,
         header,
-        carousel
+        carousel,
+        main
     },
     // strict: debug,
     plugins: []

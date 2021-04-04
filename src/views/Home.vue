@@ -1,32 +1,39 @@
 <template>
-  <Carousel class="full-page" :items="carouselItems"/>
+  <div class="container">
+    <Carousel class="full-page" :items="carouselItems"/>
+    <main-content :blocks="mainContentBlocks" />
+  </div>
 </template>
 
 <script>
 import {computed, ref} from "@vue/reactivity";
 import {useStore} from "vuex";
 import Carousel from "@/components/carousel";
+import MainContent from "@/components/MainContent";
 
 export default {
   name: 'home',
-  components: {Carousel},
+  components: {Carousel, MainContent},
   async setup() {
+    const store = useStore()
     const error = ref(null)
     const carouselItems = ref(null)
-    const store = useStore()
+    const mainContentBlocks = ref(null)
 
     try {
       await store.dispatch("carousel/getContent")
-      const content = computed(() => store.state['carousel'].content)
-      console.log(content.value)
-      console.log(content.value.sort((a, b) => a - b))
-      carouselItems.value = content.value.sort((a, b) => a.order - b.order);
+      const carouselContent = computed(() => store.state['carousel'].content)
+      carouselItems.value = carouselContent.value.sort((a, b) => a.order - b.order);
+
+      await store.dispatch("main/getContent")
+      const mainContent = computed(() => store.state['main'].content)
+      mainContentBlocks.value = mainContent.value.sort((a, b) => a.order - b.order);
     } catch (e) {
       error.value = e;
     }
 
 
-    return {error, carouselItems}
+    return {error, carouselItems, mainContentBlocks}
   }
 }
 </script>
