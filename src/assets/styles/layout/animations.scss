@@ -19,3 +19,27 @@
 .slow-fade-leave-to {
   opacity: 0;
 }
+
+.modal-enter-active,
+.modal-leave-active {
+  transition: opacity .5s ease;
+}
+
+.modal-enter-from,
+.modal-leave-to {
+  opacity: 0;
+}
+
+.modal-enter {
+  opacity: 0;
+}
+
+.modal-leave-active {
+  opacity: 0;
+}
+
+.modal-enter .modal-container,
+.modal-leave-active .modal-container {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}

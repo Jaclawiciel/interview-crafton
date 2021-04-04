@@ -5,7 +5,7 @@ html {
   font-size: 16px;
 }
 
-body {
+body, button {
   font-family: 'Muli', 'Lato', sans-serif;
   -webkit-font-smoothing: subpixel-antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -70,6 +70,18 @@ ul {
       display: inline-block;
       color: $carousel-title-em;
       font-style: normal;
+    }
+  }
+}
+
+.content {
+  .blocks {
+    .block {
+      .text-col {
+        p {
+          margin: 25px 0;
+        }
+      }
     }
   }
 }
