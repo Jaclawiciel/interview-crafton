@@ -11,7 +11,7 @@
           </template>
         </Suspense>
       </transition>
-<h1>TEST</h1>
+
       <main class="content">
         <slot/>
       </main>

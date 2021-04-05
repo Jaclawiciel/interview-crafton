@@ -12,21 +12,14 @@ const routes = [
         }
     },
     {
-        path: "/interview-crafton/",
+        path: "/interview-crafton/home",
         component: Home,
         meta: {
             transition: "slow-fade"
         }
     },
     {
-        path: "/home",
-        component: Home,
-        meta: {
-            transition: "slow-fade"
-        }
-    },
-    {
-        path: "/dlaczego",
+        path: "/interview-crafton/dlaczego",
         component: Dlaczego
     }
 ]
