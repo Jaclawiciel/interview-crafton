@@ -5,7 +5,14 @@ import Dlaczego from "@/views/Dlaczego";
 
 const routes = [
     {
-        path: "/",
+        path: "/interview-crafton",
+        component: Home,
+        meta: {
+            transition: "slow-fade"
+        }
+    },
+    {
+        path: "/interview-crafton/",
         component: Home,
         meta: {
             transition: "slow-fade"
