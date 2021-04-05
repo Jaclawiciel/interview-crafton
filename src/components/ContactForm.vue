@@ -92,10 +92,10 @@ export default {
     const fieldsError = ref({})
 
     const data = reactive({
-      firstName: "Jacek",
-      lastName: "Gałka",
-      email: "jacgalka@icloud.com",
-      message: "Lubię placki!",
+      firstName: "",
+      lastName: "",
+      email: "",
+      message: "",
       rodoChecked: false
     })
 
