@@ -1,4 +1,5 @@
 module.exports = {
+    publicPath: '/interview-crafton/',
     css: {
         loaderOptions: {
             sass: {
