@@ -18,10 +18,11 @@
 <script>
 import {onMounted} from "@vue/runtime-core";
 import MainLoader from "@/components/loaders/MainLoader";
+import AppLayout from "@/layouts/AppLayout";
 
 export default {
   name: 'App',
-  components: {MainLoader},
+  components: {AppLayout, MainLoader},
   setup() {
     onMounted(async () => {
     })
