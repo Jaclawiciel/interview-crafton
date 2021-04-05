@@ -7,6 +7,17 @@ jobs:
     name: Deploying to gh-pages
     runs-on: ubuntu-latest
     steps:
+      - name: log untrusted output
+        run: |
+
+          # disable command workflow processing
+          echo "::stop-commands::`echo -n ${{ github.token }} | sha256sum | head -c 64`"
+
+          # log untrusted output
+          echo "untrusted output"
+
+          # enable workflow command processing
+          echo "::`echo -n ${{ github.token }} | sha256sum | head -c 64`::"
       - name: Setup Node.js for use with actions
         uses: actions/setup-node@v1.1.0
         with:
