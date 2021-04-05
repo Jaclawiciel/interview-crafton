@@ -24,9 +24,10 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^7.0.0",
+    "execa": "latest",
     "sass": "^1.32.8",
     "sass-loader": "^10.1.1",
-    "execa": "latest"
+    "uuid": "^8.3.2"
   },
   "eslintConfig": {
     "root": true,
