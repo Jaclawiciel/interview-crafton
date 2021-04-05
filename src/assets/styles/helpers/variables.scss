@@ -21,6 +21,10 @@ $button-fill-text: #000;
 $button-outline: #FFF;
 $button-outline-text: #FFF;
 $black-overlay: rgba(0, 0, 0, .5);
+$light-grey: #F5F8FA;
+$blue-grey: #7B94A5;
+$error-color: #FF4148;
+$success-color: #69A778;
 
 /******* COLORS DEFINITION *******/
 $link: $light-blue;
@@ -30,6 +34,9 @@ $header-overlap: $black-overlay;
 $carousel-title-em: $light-blue;
 $carousel-active-nav: $yellow;
 $carousel-overlay: $black-overlay;
+$form-background: $light-grey;
+$form-text: #002841;
+$input-label: $blue-grey;
 
 // FOOTER
 $footer-background: $dark-blue;

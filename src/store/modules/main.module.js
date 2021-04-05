@@ -1,7 +1,8 @@
 import {mainService} from "@/api/main.service";
 
 const state = () => ({
-    content: {}
+    content: {},
+    contactFormData: {}
 })
 
 // getters
@@ -22,13 +23,31 @@ const actions = {
             commit('loaders/loadingStop', "main", {root: true});
             throw error.message
         }
-    }
+    },
+    async sendContactForm({commit}, data) {
+        commit('loaders/loadingStart', "contactForm", {root: true});
+        try {
+            const formResult = await mainService.sendContactForm(data)
+            const responseData = formResult.data
+            commit('clearContactForm')
+
+            commit('loaders/loadingStop', "contactForm", {root: true});
+            return responseData
+        } catch (error) {
+            console.error("[main.module] Contact form!", error)
+            commit('loaders/loadingStop', "contactForm", {root: true});
+            throw error.message
+        }
+    },
 }
 
 // mutations
 const mutations = {
     setContent(state, {mainContent}) {
         state.content = mainContent
+    },
+    clearContactForm(state) {
+        state.contactFormData = {}
     }
 }
 

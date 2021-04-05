@@ -1,0 +1,100 @@
+.input-group {
+  position: relative;
+  margin: 10px 0;
+}
+
+input, textarea {
+  border: none;
+  background: #FFF;
+  box-shadow: 0 0 13px -5px rgba(0, 0, 0, 0.2);
+  transition: all .25s;
+
+  &:focus {
+    outline: none;
+    box-shadow: 0 5px 20px 0 rgba(0, 0, 0, 0.2);
+  }
+}
+
+
+input:not(input[type="checkbox"]), textarea {
+  padding: 17px 10px 17px 5px;
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* LABEL ======================================= */
+.input-group label {
+  color: $blue-grey;
+  font-size: .9375rem;
+  position: absolute;
+  pointer-events: none;
+  left: 5px;
+  top: 17px;
+  transition: 0.2s ease all;
+}
+
+/* active state */
+input:focus ~ label, input:valid ~ label,
+textarea:focus ~ label, textarea:valid ~ label {
+  top: 5px;
+  font-size: 10px;
+  color: $blue-grey;
+}
+
+
+label.label-checkbox {
+  cursor: pointer;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  outline: 0;
+  background: #fff;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  font-size: 25px;
+}
+
+input[type="checkbox"]:after {
+  content: '';
+  position: relative;
+  left: 7px;
+  top: -8px;
+  width: 40%;
+  height: 60%;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: inline-block;
+}
+
+input[type="checkbox"]:checked:after {
+  border: solid $light-blue;
+  content: '';
+  position: relative;
+  left: 7px;
+  top: -6px;
+  width: 40%;
+  height: 60%;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  display: inline-block;
+}
+
+input[type="checkbox"]:hover {
+  //filter: brightness(90%);
+}
+
+input[type="checkbox"]:checked:after {
+  display: inline-block;
+}
+
+input[type="checkbox"]:disabled:after {
+  border-color: #7b7b7b;
+}

@@ -2,7 +2,8 @@ const state = () => ({
     footer: {isLoading: false},
     header: {isLoading: false},
     carousel: {isLoading: false},
-    main: {isLoading: false}
+    main: {isLoading: false},
+    contactForm: {isLoading: false}
 })
 const getters = {
     loading: state => serviceName => {

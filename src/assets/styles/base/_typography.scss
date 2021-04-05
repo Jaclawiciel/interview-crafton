@@ -43,8 +43,9 @@ ul {
 }
 
 .error {
-  color: tomato;
+  color: $error-color;
   font-weight: strong;
+  line-height: 1.5;
 
   &:before {
     content: ":(";

@@ -2,6 +2,7 @@
   <div class="container">
     <Carousel class="full-page" :items="carouselItems"/>
     <main-content :blocks="mainContentBlocks" />
+    <ContactForm/>
   </div>
 </template>
 
@@ -10,10 +11,11 @@ import {computed, ref} from "@vue/reactivity";
 import {useStore} from "vuex";
 import Carousel from "@/components/carousel";
 import MainContent from "@/components/MainContent";
+import ContactForm from "@/components/ContactForm";
 
 export default {
   name: 'home',
-  components: {Carousel, MainContent},
+  components: {ContactForm, Carousel, MainContent},
   async setup() {
     const store = useStore()
     const error = ref(null)

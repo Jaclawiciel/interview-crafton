@@ -1,5 +1,5 @@
 <template>
-  <button class="c-button" :class="styleType">
+  <button type="button" class="c-button" :class="styleType" :disabled="disabled">
     <slot/>
   </button>
 </template>
@@ -12,6 +12,11 @@ export default {
       type: String,
       required: false,
       default: "fill"
+    },
+    disabled: {
+      type: Boolean,
+      required: false,
+      default: false
     }
   }
 }
@@ -23,6 +28,8 @@ export default {
   border-radius: 20px;
   padding: 10px;
   text-align: center;
+  transition: opacity .25s;
+  cursor: pointer;
 
   &.fill {
     background: $button-fill;
@@ -33,6 +40,10 @@ export default {
     background: transparent;
     color: $button-outline-text;
     border: 1px solid $button-outline
+  }
+
+  &:hover {
+    opacity: .8;
   }
 }
 </style>
