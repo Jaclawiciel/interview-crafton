@@ -80,6 +80,12 @@ export default {
   font-size: 30px;
   font-weight: 300;
   color: #FFF;
+  cursor: pointer;
+  transition: transform .25s;
+
+  &:hover {
+    transform: scale(1.1);
+  }
 }
 
 .modal-body {

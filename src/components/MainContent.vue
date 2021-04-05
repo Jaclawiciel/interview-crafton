@@ -7,10 +7,11 @@
           <div class="paragraphs" v-html="block.text.paragraph"></div>
         </div>
         <div class="media-col col">
-          <img v-if="block.media.type === 'image'" class="image" :src="block.media.url" alt="Promotional graphics">
+          <img v-if="block.media.type === 'image'" class="image" :class="block.media.type" :src="block.media.url" alt="Promotional graphics">
           <template v-else-if="block.media.type === 'video'">
             <img @click="showVideos[index] = true"
                  class="image"
+                 :class="block.media.type"
                  :src="block.media.url"
                  alt="Promotional video"
             >
@@ -76,6 +77,15 @@ export default {
       .image {
         width: 100%;
         box-shadow: 0 12px 15px -5px rgba(0, 0, 0, .35);
+
+        &.video:hover {
+          box-shadow: 0 5px 20px 10px rgba(0, 0, 0, 0.2);
+          transform: scale(1.05);
+          cursor: pointer;
+          transition: all .25s;
+        }
+
+
       }
     }
   }
