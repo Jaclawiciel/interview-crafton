@@ -15,13 +15,15 @@
               <div v-show="block.media.showRibbon" class="ribbon ribbon-top-left"><span>Nowość</span></div>
             </div>
 
-            <div class="box" :class="block.media.type" v-else-if="block.media.type === 'video'">
-              <img @click="showVideos[index] = true"
-                   class="image"
-                   :src="block.media.url"
-                   alt="Promotional video"
-              >
-              <div v-show="block.media.showRibbon" class="ribbon ribbon-top-left"><span>Nowość</span></div>
+            <template v-else-if="block.media.type === 'video'">
+              <div class="box" :class="block.media.type">
+                <img @click="showVideos[index] = true"
+                     class="image"
+                     :src="block.media.url"
+                     alt="Promotional video"
+                >
+                <div v-show="block.media.showRibbon" class="ribbon ribbon-top-left"><span>Nowość</span></div>
+              </div>
               <transition name="modal" mode="out-in">
                 <modal v-if="showVideos[index]" @close="showVideos[index] = false">
                   <template v-slot:header/>
@@ -31,7 +33,7 @@
                   <template v-slot:footer/>
                 </modal>
               </transition>
-            </div>
+            </template>
 
           </div>
         </div>
