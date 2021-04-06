@@ -77,6 +77,7 @@ export default {
   flex-direction: column;
   margin: 15px auto;
   width: $mobile-content-width;
+  max-width: $content-max-width;
 
   .block {
     display: flex;
@@ -146,7 +147,7 @@ export default {
 
     .block {
       flex-direction: row;
-      justify-content: center;
+      justify-content: space-between;
       //margin: 50px auto;
 
       .col {
@@ -171,7 +172,6 @@ export default {
 
 @include media(">=desktopHD") {
   .blocks {
-    max-width: $desktopHD-content-max-width;
     width: $desktopHD-content-width;
   }
 }

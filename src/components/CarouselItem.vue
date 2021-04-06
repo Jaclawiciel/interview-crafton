@@ -58,6 +58,7 @@ export default {
     margin: 0 auto;
     z-index: 2;
     width: $mobile-content-width;
+    max-width: $content-max-width;
     left: 50%;
     transform: translateX(-50%);
 
@@ -116,7 +117,6 @@ export default {
   .carousel-item {
     .content {
       width: $desktopHD-content-width;
-      max-width: $desktopHD-content-max-width;
     }
   }
 }

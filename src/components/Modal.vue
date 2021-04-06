@@ -48,6 +48,7 @@ export default {
 
 .modal-wrapper {
   width: $mobile-content-width;
+  max-width: $content-max-width;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -103,7 +104,6 @@ export default {
 @include media(">=desktopHD") {
   .modal-wrapper {
     width: $desktopHD-content-width;
-    max-width: $desktopHD-content-max-width;
   }
 }
 </style>

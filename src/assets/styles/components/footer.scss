@@ -8,7 +8,7 @@
     justify-content: center;
     width: $mobile-content-width;
     margin: 0 auto;
-    max-width: 1200px;
+    max-width: $content-max-width;
 
     .section {
       display: flex;

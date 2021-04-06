@@ -12,6 +12,7 @@
     align-items: center;
     padding: 20px 0;
     width: $mobile-content-width;
+    max-width: $content-max-width;
     margin: 0 auto;
 
     .logo {
@@ -106,7 +107,6 @@
   .header {
     .main-content {
       width: $desktopHD-content-width;
-      max-width: $desktopHD-content-max-width;
     }
   }
 }
