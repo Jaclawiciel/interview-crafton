@@ -10,19 +10,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 20px 0;
+    width: $mobile-content-width;
+    margin: 0 auto;
 
     .logo {
       transition: width .25s;
-      width: 100px;
+      width: 90px;
     }
   }
 
   &.not-on-top-or-open {
     .main-content {
+      padding: 10px;
+    }
+
+    .wrapper {
       background-color: $header-overlap;
       box-shadow: 0 0 12px 5px rgba(0, 0, 0, .5);
-      padding: 10px;
 
       @supports (backdrop-filter: blur(6px)) {
         backdrop-filter: blur(6px);
@@ -50,22 +55,58 @@
 @include media(">=tablet") {
   .header {
     .main-content {
+      width: $tablet-content-width;
+
       .menu-items {
         display: flex;
         justify-content: space-evenly;
 
         .menu-item {
           color: $menu-items;
-          text-align: center;
-          margin: 0 20px;
+          text-align: right;
+          margin: 0 0 0 30px;
         }
       }
     }
 
     &.not-on-top-or-open {
       .main-content {
-        padding: 20px;
+        padding: 20px 0;
       }
+    }
+  }
+}
+
+@include media(">=desktop") {
+  .header {
+    left: 50%;
+    transform: translate(-50%);
+
+    .main-content {
+      padding: 39px 0;
+      width: $desktop-content-width;
+      margin: 0 auto;
+
+      .menu-items {
+        .menu-item {
+          margin: 0 0 0 40px;
+        }
+      }
+    }
+
+    &.not-on-top-or-open {
+      .main-content {
+        padding: 20px 0;
+      }
+    }
+  }
+}
+
+@include media(">=desktopHD") {
+  .header {
+    .main-content {
+      width: $desktopHD-content-width;
+      max-width: $desktopHD-content-max-width;
     }
   }
 }

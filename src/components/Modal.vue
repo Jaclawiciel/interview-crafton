@@ -47,7 +47,7 @@ export default {
 }
 
 .modal-wrapper {
-  width: 90%;
+  width: $mobile-content-width;
   height: 100%;
   margin: 0 auto;
   display: flex;
@@ -88,9 +88,22 @@ export default {
   }
 }
 
-.modal-body {
-
+@include media(">=tablet") {
+  .modal-wrapper {
+    width: $tablet-content-width;
+  }
 }
 
+@include media(">=desktop") {
+  .modal-wrapper {
+    width: $desktop-content-width;
+  }
+}
 
+@include media(">=desktopHD") {
+  .modal-wrapper {
+    width: $desktopHD-content-width;
+    max-width: $desktopHD-content-max-width;
+  }
+}
 </style>

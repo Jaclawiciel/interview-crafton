@@ -1,12 +1,14 @@
 .main-footer {
-  padding: 20px;
+  padding: 20px 0;
 
   .content {
     display: flex;
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    max-width: 1160px;
+    width: $mobile-content-width;
+    margin: 0 auto;
+    max-width: 1200px;
 
     .section {
       display: flex;
@@ -46,7 +48,7 @@
           min-width: calc(50% - 12px);
 
           li {
-            margin-bottom: 6px;
+            margin-bottom: 20px;
 
             &.title {
               font-weight: bold;
@@ -73,11 +75,12 @@
 
 @include media(">phoneL") {
   .main-footer {
-    padding: 50px;
+    padding: 50px 0;
     .content {
       flex-direction: row;
       justify-content: center;
       margin: 0 auto;
+      width: $tablet-content-width;
 
       .section {
         &.company-details {

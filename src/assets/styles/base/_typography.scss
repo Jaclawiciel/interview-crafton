@@ -36,6 +36,10 @@ ul {
   list-style-type: none;
 }
 
+.header .main-content .menu-items .menu-item {
+  font-weight: 700;
+}
+
 .main-footer {
   font-size: .875rem;
   line-height: 1.5;
@@ -62,9 +66,10 @@ ul {
 
     h1 {
       font-size: 2rem;
-      font-weight: 100;
+      font-weight: 300;
       color: white;
-      line-height: 1.4;
+      line-height: 1.5;
+      margin: 0;
     }
 
     em {
@@ -85,6 +90,21 @@ ul {
 
         p {
           margin: 25px 0;
+          font-size: 1.125rem;
+        }
+      }
+    }
+  }
+}
+
+@include media(">=tablet") {
+  .content {
+    .blocks {
+      .block {
+        .text-col {
+          .title {
+            font-size: 2.25rem;
+          }
         }
       }
     }

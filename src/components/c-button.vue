@@ -25,11 +25,13 @@ export default {
 <style scoped lang="scss">
 .c-button {
   border: none;
-  border-radius: 20px;
-  padding: 10px;
+  border-radius: 50px;
+  padding: 20px 33px;
   text-align: center;
   transition: opacity .25s;
   cursor: pointer;
+  font-size: .875rem;
+  text-transform: uppercase;
 
   &.fill {
     background: $button-fill;

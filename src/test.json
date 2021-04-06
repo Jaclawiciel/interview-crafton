@@ -1,38 +1,17 @@
 [
   {
-    "text": {
-      "title": "Dla kogo?",
-      "paragraph": "<p>Dedykowane nauczycielom posiadającym przygotowanie pedagogiczne, którzy chcą uzyskać merytoryczne i metodyczne przygotowanie do nauczania kolejnego przedmiotu - Geografii.</p><p>Studia adresowane są do osób legitymujących się wyższym wykształceniem na poziomie studiów licencjackim o specjalnościach nadających kwalifikacje nauczycielskie i przygotowanie pedagogiczne, lub słuchaczy legitymujących się wyższym wykształceniem na poziomie studiów magisterskich nadających kwalifikacje nauczycielskie i przygotowanie pedagogiczne, zgodnie z Rozporządzeniem Ministra Edukacji Narodowej z dnia 1 sierpnia 2017 r. w sprawie szczegółowych kwalifikacji wymaganych od nauczycieli <a href='/dlaczego'>(Dz.U. 2017 poz. 1575)</a>.<p>Wymagane od kandydata:</p><ul><li>Ukończone studia wyższe</li><li>Przygotowanie pedagogiczne</li></ul>"
-    },
-    "media": {
-      "type": "image",
-      "showRibbon": false,
-      "url": "/img/globe.png"
-    },
+    "background": "https://cdv.pl/wp-content/uploads/2021/01/slider_www_rekrutacja-1-1920x1080.png",
+    "title": "<h1>Będziesz się uczyć z ciekawością. <br/><em>Obiecujemy.</em></h1>",
+    "buttons": [
+      {
+        "text": "Zobacz więcej",
+        "type": "fill"
+      },
+      {
+        "text": "Umów się z aniołem",
+        "type": "outline"
+      }
+    ],
     "order": 1
-  },
-  {
-    "text": {
-      "title": "Dla kogo?",
-      "paragraph": "<p>Dedykowane nauczycielom posiadającym przygotowanie pedagogiczne, którzy chcą uzyskać merytoryczne i metodyczne przygotowanie do nauczania kolejnego przedmiotu - Geografii.</p><p>Studia adresowane są do osób legitymujących się wyższym wykształceniem na poziomie studiów licencjackim o specjalnościach nadających kwalifikacje nauczycielskie i przygotowanie pedagogiczne, lub słuchaczy legitymujących się wyższym wykształceniem na poziomie studiów magisterskich nadających kwalifikacje nauczycielskie i przygotowanie pedagogiczne, zgodnie z Rozporządzeniem Ministra Edukacji Narodowej z dnia 1 sierpnia 2017 r. w sprawie szczegółowych kwalifikacji wymaganych od nauczycieli <a href='/dlaczego'>(Dz.U. 2017 poz. 1575)</a>.<p>Wymagane od kandydata:</p><ul><li>Ukończone studia wyższe</li><li>Przygotowanie pedagogiczne</li></ul>"
-    },
-    "media": {
-      "type": "image",
-      "showRibbon": false,
-      "url": "/img/hand.png"
-    },
-    "order": 2
-  },
-  {
-    "text": {
-      "title": "Dla kogo?",
-      "paragraph": "<p>Dedykowane nauczycielom posiadającym przygotowanie pedagogiczne, którzy chcą uzyskać merytoryczne i metodyczne przygotowanie do nauczania kolejnego przedmiotu - Geografii.</p><p>Studia adresowane są do osób legitymujących się wyższym wykształceniem na poziomie studiów licencjackim o specjalnościach nadających kwalifikacje nauczycielskie i przygotowanie pedagogiczne, lub słuchaczy legitymujących się wyższym wykształceniem na poziomie studiów magisterskich nadających kwalifikacje nauczycielskie i przygotowanie pedagogiczne, zgodnie z Rozporządzeniem Ministra Edukacji Narodowej z dnia 1 sierpnia 2017 r. w sprawie szczegółowych kwalifikacji wymaganych od nauczycieli <a href='/dlaczego'>(Dz.U. 2017 poz. 1575)</a>.<p>Wymagane od kandydata:</p><ul><li>Ukończone studia wyższe</li><li>Przygotowanie pedagogiczne</li></ul>"
-    },
-    "media": {
-      "type": "image",
-      "showRibbon": true,
-      "url": "/img/video.png"
-    },
-    "order": 3
   }
 ]

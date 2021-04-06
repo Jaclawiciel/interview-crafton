@@ -4,7 +4,8 @@ $breakpoints: (
         'phoneM': 375px,
         'phoneL': 414px,
         'tablet': 768px,
-        'desktop': 1024px
+        'desktop': 1024px,
+        'desktopHD': 1600px
 ) !default;
 
 /******* COLORS *******/
@@ -37,6 +38,13 @@ $carousel-overlay: $black-overlay;
 $form-background: $light-grey;
 $form-text: #002841;
 $input-label: $blue-grey;
+
+/********* WIDTHS *********/
+$mobile-content-width: 90%;
+$tablet-content-width: 90%;
+$desktop-content-width: 85%;
+$desktopHD-content-width: 75%;
+$desktopHD-content-max-width: 1200px;
 
 // FOOTER
 $footer-background: $dark-blue;

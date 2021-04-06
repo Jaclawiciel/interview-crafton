@@ -64,7 +64,7 @@ export default {
     z-index: 2;
 
     .control-dot {
-      margin: 24px 0;
+      margin: 15px 0;
       padding: 6px;
       cursor: pointer;
 
@@ -97,6 +97,14 @@ export default {
   .carousel {
     .carousel-nav {
       right: 50px;
+    }
+  }
+}
+
+@include media(">=desktop") {
+  .carousel {
+    .carousel-nav {
+      right: 100px;
     }
   }
 }

@@ -26,8 +26,7 @@
     "eslint-plugin-vue": "^7.0.0",
     "execa": "latest",
     "sass": "^1.32.8",
-    "sass-loader": "^10.1.1",
-    "uuid": "^8.3.2"
+    "sass-loader": "^10.1.1"
   },
   "eslintConfig": {
     "root": true,

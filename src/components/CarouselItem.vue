@@ -55,8 +55,11 @@ export default {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin: 0 30px;
+    margin: 0 auto;
     z-index: 2;
+    width: $mobile-content-width;
+    left: 50%;
+    transform: translateX(-50%);
 
     .buttons {
       margin-bottom: 20vh;
@@ -85,9 +88,6 @@ export default {
 @include media(">=tablet") {
   .carousel-item {
     .content {
-      margin: 0 50px;
-      max-width: 500px;
-
       .buttons {
         margin-bottom: 30vh;
       }
@@ -97,13 +97,26 @@ export default {
 
 @include media(">=desktop") {
   .carousel-item {
+    display: flex;
+    justify-content: center;
+
     .content {
-      margin-left: 100px;
-      max-width: 500px;
+      margin: 0 auto;
+      width: $desktop-content-width;
 
       .buttons {
         margin-bottom: 30vh;
+        margin-top: 60px;
       }
+    }
+  }
+}
+
+@include media(">=desktopHD") {
+  .carousel-item {
+    .content {
+      width: $desktopHD-content-width;
+      max-width: $desktopHD-content-max-width;
     }
   }
 }

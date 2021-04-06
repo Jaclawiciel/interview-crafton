@@ -1,13 +1,15 @@
 <template>
   <p class="error" v-if="error">{{ error }}</p>
   <header v-else class="header" :class="{'not-on-top-or-open': !isOnTop || isMenuOpen}">
-    <div class="main-content">
-      <img class="logo" src="../assets/img/logo.png" alt="Logo">
-      <hamburger v-model:isMenuOpen="isMenuOpen"/>
-      <div class="menu-items">
-        <router-link class="menu-item strong" v-for="(menuItem, index) in menuItems" :key="index" :to="menuItem.url">
-          {{ menuItem.label }}
-        </router-link>
+    <div class="wrapper">
+      <div class="main-content">
+        <img class="logo" src="../assets/img/logo.png" alt="Logo">
+        <hamburger v-model:isMenuOpen="isMenuOpen"/>
+        <div class="menu-items">
+          <router-link class="menu-item strong" v-for="(menuItem, index) in menuItems" :key="index" :to="menuItem.url">
+            {{ menuItem.label }}
+          </router-link>
+        </div>
       </div>
     </div>
     <mobile-menu :is-open="isMenuOpen" :menuItems="menuItems"/>

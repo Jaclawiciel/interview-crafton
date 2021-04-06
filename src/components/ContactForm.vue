@@ -43,7 +43,6 @@
                 rows="10"
                 required
                 v-model="message"
-                :class="{'field-error': !isFieldValid('message')}"
                 @input="clearFieldError('message')"
       ></textarea>
             <label>Treść wiadomości</label>
@@ -168,7 +167,9 @@ export default {
   background: $form-background;
 
   .form-wrapper {
-    padding: 50px 20px;
+    padding: 50px 0;
+    width: $mobile-content-width;
+    margin: 0 auto;
   }
 
   .contact-form {
@@ -277,11 +278,9 @@ export default {
 @include media(">=tablet") {
   .form {
     .contact-form {
-      width: 80%;
       margin: 0 auto;
 
       .send-form-button {
-        width: 200px;
         margin-left: auto;
         margin-right: auto;
       }
@@ -291,10 +290,10 @@ export default {
 
 @include media(">=desktop") {
   .form {
-    .contact-form {
-      width: 60%;
+    .form-wrapper {
+      padding: 50px 0;
+      max-width: 580px;
       margin: 0 auto;
-      max-width: 800px;
     }
   }
 }

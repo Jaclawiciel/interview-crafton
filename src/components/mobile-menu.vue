@@ -26,7 +26,7 @@ export default {
 <style scoped lang="scss">
 .mobile-menu {
   position: fixed;
-  top: 85px;
+  top: 80px;
   color: $font-dark;
   width: 100%;
   display: flex;
